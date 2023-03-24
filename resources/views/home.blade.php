@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Joudah Mitra Prima</title>
+    <title>Jaoudah Oud</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
@@ -22,14 +22,14 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#page-top"><img src="/assets/img/logo.png" alt="..." /></a>
+            <a class="" href="#page-top"><img style="height: 100px;" src="/assets/img/logo.png" alt="..." /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars ms-1"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#services">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#masterhead">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Store</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">News</a></li>
                     <li class="nav-item"><a class="nav-link" href="#team">Gallery</a></li>
@@ -39,7 +39,7 @@
         </div>
     </nav>
     <!-- Masthead-->
-    <header class="masthead">
+    <header class="masthead" id="masterhead">
         <div class="container">
             <!-- <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a> -->
         </div>
@@ -50,7 +50,7 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">About</h2>
-                <h3 class="section-subheading text-muted">Joudah Mitra Prima</h3>
+                <h3 class="section-subheading text-muted">Joudah Oud</h3>
             </div>
             <div class="text-center">
                 <p class="text-muted">Jawda Mitra Prima is a domestic agarwood manufacturing company. In collaboration with a legal distribution service provider in Papua and having a Domestic Plant and Animal Transport Letter (SATSDN) allows Jawda Mitra Prima to export part of its production to various countries.
@@ -64,7 +64,7 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Vission & Mission</h2>
-                <h3 class="section-subheading text-muted">Joudah Mitra Prima</h3>
+                <h3 class="section-subheading text-muted">Joudah Oud</h3>
             </div>
             <ul class="timeline">
                 <li class="timeline-inverted">
@@ -93,37 +93,6 @@
         </div>
     </section>
 
-    <!-- Services-->
-    <section class="page-section" id="services">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Our Values</h2>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-thumbs-up fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Profesional</h4>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-handshake fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Commitment</h4>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-shield-alt fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Integrity</h4>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Services-->
     <section class="page-section" id="services">
@@ -131,8 +100,8 @@
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">WE ARE REGISTERED ON</h2>
             </div>
-            <div class="row text-center">
-                <div class="col-md-5">
+            <div class="row text-center mt-5">
+                <div class="col-md-6">
                     <span class="fa-stack fa-3x">
                         <i class="timeline-image">
                             <img class="rounded-circle img-fluid center-block" src="/assets/img/kemenlhk.png" alt="..." style="display: block; margin: 0 auto;">
@@ -141,7 +110,7 @@
                     <h4 class="my-3">KEMEN LHK</h4>
                     <p class="text-muted">148/k.13/TU/TSL/10/2019</p>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-6">
                     <span class="fa-stack fa-3x">
                         <i class="timeline-image">
                             <img class="img-fluid center-block" src="/assets/img/asgarin.jpg" alt="..." style="display: block; margin: 0 auto;">
@@ -156,7 +125,7 @@
 
 
     <!-- Portfolio Grid-->
-    <section class="page-section bg-light" id="portfolio">
+    <section class="page-section bg-brown" id="portfolio">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Gallery</h2>
@@ -232,9 +201,6 @@
         </div>
     </section>
 
-
-
-
     <!-- Footer-->
     <footer class="footer">
         <div class="container">
@@ -246,20 +212,17 @@
                     <p>Email: Joudamitraprima@gmail.com</p>
                 </div>
                 <div class="col-md-6">
-                    <h3>Connect with Us</h3>
-                    <ul class="social-links">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    </ul>
-                    <div class="logo-footer">
-                        <img src="/assets/img/logo.png" alt="..." />
+                    <h3>SHOPEE</h3>
+                    <div class="social-links">
+                        <div class="barcode-footer">
+                            <img src="https://static.wixstatic.com/media/ce3925_09aa75c01fa543d6b551623464b0451d~mv2.png/v1/fill/w_212,h_212,al_c,lg_1,q_85,enc_auto/QRcode.png" alt="Barcode" width="100" />
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <p>&copy; 2023 Jawda Mitra Prima. All Rights Reserved.</p>
+                    <p>&copy; 2023 Joudah Oud. All Rights Reserved.</p>
                 </div>
             </div>
         </div>

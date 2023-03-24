@@ -71,7 +71,7 @@
     --bs-body-font-weight: 400;
     --bs-body-line-height: 1.5;
     --bs-body-color: #212529;
-    --bs-body-bg: #fff;
+    --bs-body-bg: #531d02;
 }
 
 *,
@@ -8142,7 +8142,11 @@ fieldset:disabled .btn {
 
 .text-muted {
     --bs-text-opacity: 1;
-    color: #6c757d !important;
+    color: #f5d5ae !important;
+}
+
+.subheading {
+    color: #f5d5ae !important;
 }
 
 .text-black-50 {
@@ -11834,11 +11838,8 @@ header.masthead {
     0% {
         background-image: url("../img/galery2.webp");
     }
-    50% {
-        background-image: url("../img/gambar1.webp");
-    }
     100% {
-        background-image: url("../img/galery3.webp");
+        background-image: url("../img/galery2.webp");
     }
 }
 
@@ -12192,6 +12193,19 @@ header.masthead .masthead-heading {
     height: 2.75rem;
 }
 
+section#vision {
+    background-color: #212529;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#vision {
+    margin-top: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    padding: 50px;
+}
+
 section#contact {
     background-color: #212529;
     background-image: url("../assets/img/map-image.png");
@@ -12200,14 +12214,38 @@ section#contact {
 }
 
 #contact {
+    margin-top: 20px;
     border: 2px solid #ccc;
-    border-radius: 15px;
+    border-radius: 50px;
     padding: 50px;
 }
 
-section#contact .section-heading {
-    color: #fff;
+section#services {
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
+#services {
+    margin-top: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    padding: 50px;
+    margin-bottom: 20px;
+}
+
+section#contact .section-heading {
+    color: #f5d5ae;
+}
+
+section#vision .section-heading {
+    color: #f5d5ae;
+}
+
+section#portfolio .section-heading {
+    color: #f5d5ae;
+}
+
 section#contact form#contactForm .form-group {
     margin-bottom: 1.5rem;
 }
@@ -12270,7 +12308,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 } */
 
 .footer {
-    background-color: #3f3d56;
+    background-color: #212529;
     color: #fff;
     padding: 80px 0;
 }
@@ -12306,10 +12344,20 @@ section#contact form#contactForm :-ms-input-placeholder {
     color: #fff;
 }
 
+.social-links {
+    display: flex;
+    align-items: center;
+}
+
 .logo-footer {
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
+    margin-right: -20px;
+}
+
+.barcode-footer {
+    margin-right: 200px;
 }
 
 .logo-footer img {
