@@ -8145,8 +8145,24 @@ fieldset:disabled .btn {
     color: #f5d5ae !important;
 }
 
+.text-muted#visimisi {
+    --bs-text-opacity: 1;
+    color: #000 !important;
+    text-align: justify;
+}
+
+.text-muted#registered {
+    --bs-text-opacity: 1;
+    color: #000 !important;
+}
+
 .subheading {
     color: #f5d5ae !important;
+}
+
+.subheading#visimisi {
+    color: #000 !important;
+    text-align: justify;
 }
 
 .text-black-50 {
@@ -12194,15 +12210,32 @@ header.masthead .masthead-heading {
 }
 
 section#vision {
-    background-color: #212529;
+    background-color: #531d02;
     background-repeat: no-repeat;
     background-position: center;
+}
+.timeline-panel#visi {
+    border: 2px solid gold;
+    border-radius: 20px;
+    background-color: gold;
+}
+
+.timeline-heading#visi {
+    color: #066173;
+}
+
+.timeline-panel#misi {
+    border: 2px solid gold;
+    border-radius: 20px;
+    background-color: gold;
+}
+
+.timeline-heading#misi {
+    color: #066173;
 }
 
 #vision {
     margin-top: 20px;
-    border: 2px solid #ccc;
-    border-radius: 50px;
     padding: 50px;
 }
 
