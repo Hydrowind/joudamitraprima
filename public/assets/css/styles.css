@@ -8151,6 +8151,21 @@ fieldset:disabled .btn {
     text-align: justify;
 }
 
+.text-muted#subabout {
+    color: #000 !important;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin-bottom: 4rem;
+}
+
+.text-muted#descabout {
+    color: #000 !important;
+}
+
 .text-muted#registered {
     --bs-text-opacity: 1;
     color: #000 !important;
@@ -12240,7 +12255,7 @@ section#vision {
 }
 
 section#contact {
-    background-color: #212529;
+    background-color: gold;
     background-image: url("../assets/img/map-image.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -12248,7 +12263,7 @@ section#contact {
 
 #contact {
     margin-top: 20px;
-    border: 2px solid #ccc;
+    border: 5px solid #ccc;
     border-radius: 50px;
     padding: 50px;
 }
@@ -12268,7 +12283,7 @@ section#services {
 }
 
 section#contact .section-heading {
-    color: #f5d5ae;
+    color: #000 !important;
 }
 
 section#vision .section-heading {

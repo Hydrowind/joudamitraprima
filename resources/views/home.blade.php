@@ -32,7 +32,7 @@
                     <li class="nav-item"><a class="nav-link" href="#masterhead">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Store</a></li>
                     <li class="nav-item"><a class="nav-link" href="/news">News</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">About</a></li>
                 </ul>
             </div>
@@ -50,10 +50,10 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">About</h2>
-                <h3 class="section-subheading text-muted">Joudah Oud</h3>
+                <h3 class="text-muted" id="subabout">Joudah Oud</h3>
             </div>
             <div class="text-center">
-                <p class="text-muted">Jawda Mitra Prima is a domestic agarwood manufacturing company. In collaboration with a legal distribution service provider in Papua and having a Domestic Plant and Animal Transport Letter (SATSDN) allows Jawda Mitra Prima to export part of its production to various countries.
+                <p class="text-muted" id="descabout">Jawda Mitra Prima is a domestic agarwood manufacturing company. In collaboration with a legal distribution service provider in Papua and having a Domestic Plant and Animal Transport Letter (SATSDN) allows Jawda Mitra Prima to export part of its production to various countries.
                     Jawda Mitra Prima strives to answer customer requests by continuing to innovate to make Sana'i and Incense. This managed to get a positive response from customers and made Jawda Mitra Prima advance towards the opening of Sana'i and the Incense Industry in 2020. </p>
             </div>
         </div>

@@ -20,3 +20,4 @@ Route::get('/news', [PageController::class, 'news']);
 Route::get('/news/detail', [PageController::class, 'newsdetail']);
 Route::get('/gallery', [PageController::class, 'gallery']);
 Route::get('/about', [PageController::class, 'about']);
+Route::get('/login', [PageController::class, 'login']);
