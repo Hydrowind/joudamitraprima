@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\GalleryController;
@@ -26,11 +28,21 @@ Route::get('/gallery', [PageController::class, 'gallery']);
 Route::get('/about', [PageController::class, 'about']);
 Route::get('/login', [PageController::class, 'login']);
 
-// Admin Page
-Route::get('/dashboard', function () {
-  return view('dashboard');
+// Authorization
+Route::controller(AuthController::class)->group(function() {
+  Route::get('/login', 'login')->name('login');
+  Route::post('/signin', 'signin')->name('signin');
+  Route::get('/signout', 'signout')->name('signout');
 });
 
-Route::resource('/product', ProductController::class);
-Route::resource('/news', NewsController::class);
-Route::resource('/gallery', GalleryController::class);
+// Admin Page
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
+  Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+  Route::resources([
+      'product'     => ProductController::class,
+      'news'        => NewsController::class,
+      'gallery'     => GalleryController::class,
+  ]);
+  // Route::resource('users', UserController::class)->middleware('superadmin');
+});
+

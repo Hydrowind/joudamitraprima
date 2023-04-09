@@ -17,7 +17,11 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => fake()->name(),
+            'imageUrl' => 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/flat-white-3402c4f.jpg',
+            'description' => fake()->paragraph(1),
+            'link' => 'https://shopee.co.id/Jual-Kipas-Angin-Berdiri-16-Stand-Fan-16-Inch-Sanex-Fs-884-Fs-899-Terlaris-!-Diskon-!-Terbaru-!-i.222581583.5584259433',
+            'price' => 15000,
         ];
     }
 }

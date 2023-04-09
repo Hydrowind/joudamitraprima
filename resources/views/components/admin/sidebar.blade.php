@@ -3,7 +3,7 @@
         <div class="sb-sidenav-menu">
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">Core</div>
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{ route('dashboard') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Dashboard
                 </a>
@@ -51,15 +51,15 @@
                     </nav>
                 </div> -->
                 <div class="sb-sidenav-menu-heading">Data</div>
-                <a class="nav-link" href="/product">
+                <a class="nav-link" href="{{ route('product.index') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                     Product
                 </a>
-                <a class="nav-link" href="/news">
+                <a class="nav-link" href="{{ route('news.index') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                     News
                 </a>
-                <a class="nav-link" href="/gallery">
+                <a class="nav-link" href="{{ route('gallery.index') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                     Gallery
                 </a>
@@ -67,7 +67,7 @@
         </div>
         <div class="sb-sidenav-footer">
             <div class="small">Logged in as:</div>
-            Joudah Admin
+            {{ Auth::user()->name }}
         </div>
     </nav>
 </div>

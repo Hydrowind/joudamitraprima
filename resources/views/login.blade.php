@@ -17,19 +17,20 @@
             <div class="pill-3 rotate-45"></div>
             <div class="pill-4 rotate-45"></div>
         </div>
-        <div class="login">
+        <form method="POST" action="{{ route('signin') }}" class="login">
+            @csrf
             <h3 class="title">Admin Login</h3>
             <div class="text-input">
                 <i class="ri-user-fill"></i>
-                <input type="text" placeholder="Username">
+                <input type="email" name="email" placeholder="Email">
             </div>
             <div class="text-input">
                 <i class="ri-lock-fill"></i>
-                <input type="password" placeholder="Password">
+                <input type="password" name="password" placeholder="Password">
             </div>
-            <button class="login-btn">LOGIN</button>
-            <a href="#" class="forgot">Forgot Username/Password?</a>
-        </div>
+            <button type="submit" class="login-btn">LOGIN</button>
+            <!-- <a href="#" class="forgot">Forgot Username/Password?</a> -->
+        </form>
     </div>
 </body>
 

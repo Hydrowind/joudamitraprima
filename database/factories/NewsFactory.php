@@ -17,9 +17,9 @@ class NewsFactory extends Factory
     public function definition()
     {
         return [
-            'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
+            'title' => fake()->name(),
+            'content' => fake()->paragraph(3),
+            'imageUrl' => 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/flat-white-3402c4f.jpg',
         ];
     }
 }
