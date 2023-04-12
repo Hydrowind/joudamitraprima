@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\News;
 
 class PageController extends Controller
 {
@@ -19,7 +20,7 @@ class PageController extends Controller
     }
 
     public function news(){
-        return view('news');
+        return view('news', ['data' => News::all()]);
     }
     
     public function newsdetail(){

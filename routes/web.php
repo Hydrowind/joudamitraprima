@@ -23,7 +23,7 @@ use App\Http\Controllers\GalleryController;
 Route::get('/', [PageController::class, 'home']);
 Route::get('/store', [PageController::class, 'store']);
 Route::get('/news', [PageController::class, 'news']);
-Route::get('/news/detail', [PageController::class, 'newsdetail']);
+Route::get('/news/detail', [PageController::class, 'newsdetail'])->name('newsdetail');
 Route::get('/gallery', [PageController::class, 'gallery']);
 Route::get('/about', [PageController::class, 'about']);
 Route::get('/login', [PageController::class, 'login']);

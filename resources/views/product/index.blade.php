@@ -18,6 +18,7 @@
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
             Product Data
+            <a class="btn btn-sm btn-primary float-end" href="{{ route('product.create') }}">+ Insert New Data</a>
         </div>
         <div class="card-body">
             <table id="datatablesSimple">
@@ -41,9 +42,7 @@
                         <td>{{ $d->price }}</td>
                         <td> 
                             <div class="d-flex flex-row flex-nowrap">
-                                <form action="{{ route( 'product.update', $d->id) }}" method="post" class="d-inline">
-                                    @csrf
-                                    @method('PUT')
+                                <form action="{{ route( 'product.edit', $d->id) }}" method="get" class="d-inline">
                                     <button class="btn btn-warning">Edit</button>
                                 </form>
                                 <a class="btn btn-danger ml-2" href="#" data-toggle="modal" data-target="{{ '#confirmModal'.$d->id }}">

@@ -24,7 +24,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        return view('news.create');
     }
 
     /**
@@ -35,7 +35,17 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new News();
+
+        $data->title = $request->title;
+        $data->content = $request->content;
+        $data->imageUrl = $request->imageUrl;
+
+        if($data->save()){
+            return redirect()->route('news.index');
+        }else{
+            return back()->withInput();
+        }
     }
 
     /**
@@ -57,7 +67,7 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('news.edit', ['data' => News::find($id)]);
     }
 
     /**
@@ -69,7 +79,17 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = News::find($id);
+
+        $data->title = $request->title;
+        $data->content = $request->content;
+        $data->imageUrl = $request->imageUrl;
+
+        if($data->save()){
+            return redirect()->route('news.index');
+        }else{
+            return back()->withInput();
+        }
     }
 
     /**
@@ -80,6 +100,7 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        News::destroy($id);
+        return redirect()->route('news.index');
     }
 }

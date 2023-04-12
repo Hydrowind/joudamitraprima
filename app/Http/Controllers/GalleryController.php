@@ -24,7 +24,7 @@ class GalleryController extends Controller
      */
     public function create()
     {
-        //
+        return view('gallery.create');
     }
 
     /**
@@ -35,7 +35,15 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Gallery();
+
+        $data->imageUrl = $request->imageUrl;
+
+        if($data->save()){
+            return redirect()->route('gallery.index');
+        }else{
+            return back()->withInput();
+        }
     }
 
     /**
@@ -57,7 +65,7 @@ class GalleryController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('gallery.edit', ['data' => Gallery::find($id)]);
     }
 
     /**
@@ -69,7 +77,15 @@ class GalleryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = Gallery::find($id);
+
+        $data->imageUrl = $request->imageUrl;
+
+        if($data->save()){
+            return redirect()->route('gallery.index');
+        }else{
+            return back()->withInput();
+        }
     }
 
     /**
@@ -80,6 +96,7 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Gallery::destroy($id);
+        return redirect()->route('gallery.index');
     }
 }

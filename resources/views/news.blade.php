@@ -7,7 +7,19 @@
             <h2 class="section-heading text-uppercase text-white">NEWS</h2>
         </div>
         <div class="row text-center mt-5">
-          @for($i=0 ; $i<6 ; $i++)
+          @foreach($data as $d)
+            <div class="col-md-4 mt-3">
+              <div class="card">
+                <img src="{{ $d->imageUrl }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ $d->title }}</h5>
+                  <p class="card-text">{{ $d->content }}</p>
+                  <a href="{{ route('newsdetail', $d->id) }}" class="btn btn-primary">Lihat Berita</a>
+                </div>
+              </div>
+            </div>
+          @endforeach
+          <!-- @for($i=0 ; $i<6 ; $i++)
           <div class="col-md-4 mt-3">
             <div class="card">
               <img src="https://static.vecteezy.com/system/resources/thumbnails/004/216/831/original/3d-world-news-background-loop-free-video.jpg" class="card-img-top" alt="...">
@@ -18,7 +30,7 @@
               </div>
             </div>
           </div>
-          @endfor
+          @endfor -->
         </div>
     </div>
 </section>
