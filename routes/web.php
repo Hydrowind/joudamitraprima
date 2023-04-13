@@ -21,7 +21,7 @@ use App\Http\Controllers\GalleryController;
 
 // User Page
 Route::get('/', [PageController::class, 'home']);
-Route::get('/store', [PageController::class, 'store']);
+Route::get('/store', [PageController::class, 'store'])->name('store');
 Route::get('/news', [PageController::class, 'news']);
 Route::get('/news/detail', [PageController::class, 'newsdetail'])->name('newsdetail');
 Route::get('/gallery', [PageController::class, 'gallery']);

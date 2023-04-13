@@ -129,8 +129,22 @@
                 <h2 class="section-heading text-uppercase">Gallery</h2>
             </div>
             <div class="row">
+                <!-- Portfolio item 0-->
+                @foreach($data as $d)
                 <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 1-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="{{ $d->imageUrl }}" alt="..." />
+                        </a>
+                    </div>
+                </div>
+                @endforeach
+
+                <!-- Portfolio item 1-->
+                <div class="col-lg-4 col-sm-6 mb-4">
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
                             <div class="portfolio-hover">
@@ -140,8 +154,9 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Portfolio item 2-->
                 <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 2-->
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
                             <div class="portfolio-hover">
@@ -151,8 +166,9 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Portfolio item 3-->
                 <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 3-->
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
                             <div class="portfolio-hover">
@@ -162,8 +178,9 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Portfolio item 4-->
                 <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                    <!-- Portfolio item 4-->
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
                             <div class="portfolio-hover">
@@ -173,8 +190,9 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Portfolio item 5-->
                 <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                    <!-- Portfolio item 5-->
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
                             <div class="portfolio-hover">
@@ -184,8 +202,9 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Portfolio item 6-->
                 <div class="col-lg-4 col-sm-6">
-                    <!-- Portfolio item 6-->
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
                             <div class="portfolio-hover">

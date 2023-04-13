@@ -4,15 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\News;
+use App\Models\Product;
+use App\Models\Gallery;
 
 class PageController extends Controller
 {
     public function home(){
-        return view('home');
+        return view('home', ['data' => Gallery::all()]);
     }
 
     public function store(){
-        return view('store');
+        return view('store', ['data' => Product::all()]);
     }
 
     public function about(){
@@ -23,8 +25,8 @@ class PageController extends Controller
         return view('news', ['data' => News::all()]);
     }
     
-    public function newsdetail(){
-        return view('newsdetail');
+    public function newsdetail($id){
+        return view('newsdetail', ['data' => News::find($id)]);
     }
 
     public function gallery(){

@@ -46,7 +46,7 @@ class ProductController extends Controller
         if($data->save()){
             return redirect()->route('product.index');
         }else{
-            return redirect()->back();
+            return back()->withInput();
         }
     }
 
@@ -92,7 +92,7 @@ class ProductController extends Controller
         if($data->save()){
             return redirect()->route('product.index');
         }else{
-            return redirect()->back();
+            return back()->withInput();
         }
     }
 
@@ -104,6 +104,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        Product::delete($id);
+        Product::destroy($id);
+        return redirect()->route('product.index');
     }
 }
