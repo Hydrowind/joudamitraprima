@@ -23,26 +23,25 @@ use App\Http\Controllers\GalleryController;
 Route::get('/', [PageController::class, 'home']);
 Route::get('/store', [PageController::class, 'store'])->name('store');
 Route::get('/news', [PageController::class, 'news']);
-Route::get('/news/detail', [PageController::class, 'newsdetail'])->name('newsdetail');
+Route::get('/news/detail/{id}', [PageController::class, 'newsdetail'])->name('newsdetail');
 Route::get('/gallery', [PageController::class, 'gallery']);
 Route::get('/about', [PageController::class, 'about']);
 Route::get('/login', [PageController::class, 'login']);
 
 // Authorization
-Route::controller(AuthController::class)->group(function() {
+Route::controller(AuthController::class)->group(function () {
   Route::get('/login', 'login')->name('login');
   Route::post('/signin', 'signin')->name('signin');
   Route::get('/signout', 'signout')->name('signout');
 });
 
 // Admin Page
-Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
   Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
   Route::resources([
-      'product'     => ProductController::class,
-      'news'        => NewsController::class,
-      'gallery'     => GalleryController::class,
+    'product'     => ProductController::class,
+    'news'        => NewsController::class,
+    'gallery'     => GalleryController::class,
   ]);
   // Route::resource('users', UserController::class)->middleware('superadmin');
 });
-
