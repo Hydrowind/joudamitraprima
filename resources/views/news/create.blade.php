@@ -9,25 +9,22 @@
                 <h2 class="m-0 font-weight-bold text-primary"><i class="fas fa-house-user"></i> Create New Data</h2>
             </div>
             <div class="card-body">
-            <form class="user" method="post" action="{{ route('news.store') }}">
+                <form class="user" method="post" action="{{ route('news.store') }}">
                     @csrf
 
                     <div class="form-group">
                         <label for="title">Title</label>
-                        <input type="text" class="form-control" id="title"
-                            placeholder="Input Title" name="title" required>
+                        <input type="text" class="form-control" id="title" placeholder="Input Title" name="title" required>
                     </div>
 
                     <div class="form-group">
                         <label for="content">Content</label>
-                        <input type="text" class="form-control" id="content"
-                            placeholder="Input Content" name="content" required>
+                        <input type="text" class="form-control" id="content" placeholder="Input Content" name="content" required>
                     </div>
 
                     <div class="form-group">
                         <label for="imageUrl">Image URL</label>
-                        <input type="text" class="form-control" id="imageUrl"
-                            placeholder="Input Image URL" name="imageUrl" required>
+                        <input type="text" class="form-control" id="imageUrl" placeholder="Input Image URL" name="imageUrl" required>
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-user btn-block">
@@ -39,4 +36,3 @@
     </div>
 </div>
 @endsection
-

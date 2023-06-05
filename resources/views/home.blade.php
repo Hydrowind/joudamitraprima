@@ -221,14 +221,14 @@
     <!-- Footer-->
     <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
+            <div class="row ">
+                <div class="col-md-10">
                     <h3>Contact Us</h3>
                     <p>Address: Jl. Joglo Raya No.67, Kembangan, Kota Jakarta Barat, DKI Jakarta, 11640</p>
                     <p>Phone: (+62)813-8985-1189 </p>
                     <p>Email: Joudamitraprima@gmail.com</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-2">
                     <h3>SHOPEE</h3>
                     <div class="social-links">
                         <div class="barcode-footer">

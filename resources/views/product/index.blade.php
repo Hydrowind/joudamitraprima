@@ -40,7 +40,7 @@
                         <td>{{ $d->description }}</td>
                         <td>{{ $d->link }}</td>
                         <td>{{ $d->price }}</td>
-                        <td> 
+                        <td>
                             <div class="d-flex flex-row flex-nowrap">
                                 <form action="{{ route( 'product.edit', $d->id) }}" method="get" class="d-inline">
                                     <button class="btn btn-warning">Edit</button>
@@ -60,8 +60,7 @@
 
 
 @foreach ($data as $d)
-<div class="modal fade" id="{{ 'confirmModal'.$d->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+<div class="modal fade" id="{{ 'confirmModal'.$d->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">Apakah Anda yakin akan menghapus data ini ?</div>

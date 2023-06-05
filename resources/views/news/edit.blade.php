@@ -9,26 +9,23 @@
                 <h2 class="m-0 font-weight-bold text-primary"><i class="fas fa-house-user"></i> Edit Data</h2>
             </div>
             <div class="card-body">
-            <form class="user" method="post" action="{{ route('news.update', $data->id) }}">
+                <form class="user" method="post" action="{{ route('news.update', $data->id) }}">
                     @method('put')
                     @csrf
 
                     <div class="form-group">
                         <label for="title">Title</label>
-                        <input type="text" class="form-control" id="title"
-                            placeholder="Input Title" name="title" value="{{ $data->title }}" required>
+                        <input type="text" class="form-control" id="title" placeholder="Input Title" name="title" value="{{ $data->title }}" required>
                     </div>
 
                     <div class="form-group">
                         <label for="content">Content</label>
-                        <input type="text" class="form-control" id="content"
-                            placeholder="Input Content" name="content" value="{{ $data->content }}" required>
+                        <input type="text" class="form-control" id="content" placeholder="Input Content" name="content" value="{{ $data->content }}" required>
                     </div>
 
                     <div class="form-group">
                         <label for="imageUrl">Image URL</label>
-                        <input type="text" class="form-control" id="imageUrl"
-                            placeholder="Input Image URL" name="imageUrl" value="{{ $data->imageUrl }}" required>
+                        <input type="text" class="form-control" id="imageUrl" placeholder="Input Image URL" name="imageUrl" value="{{ $data->imageUrl }}" required>
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-user btn-block">
@@ -40,4 +37,3 @@
     </div>
 </div>
 @endsection
-
