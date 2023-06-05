@@ -45,7 +45,7 @@
                                 <form action="{{ route( 'product.edit', $d->id) }}" method="get" class="d-inline">
                                     <button class="btn btn-warning">Edit</button>
                                 </form>
-                                <a class="btn btn-danger ml-2" href="#" data-toggle="modal" data-target="{{ '#confirmModal'.$d->id }}">
+                                <a class="btn btn-danger ml-2" href="#" data-bs-toggle="modal" data-bs-target="{{ '#confirmModal'.$d->id }}">
                                     Hapus
                                 </a>
                             </div>
@@ -60,20 +60,21 @@
 
 
 @foreach ($data as $d)
-<div class="modal fade" id="{{ 'confirmModal'.$d->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body">Apakah Anda yakin akan menghapus data ini ?</div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                <form action="{{ route( 'product.destroy', $d->id) }}" method="post" style="display: inline">
-                    @method('delete')
-                    @csrf
-                    <button class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i> Hapus</button>
-                </form>
-            </div>
-        </div>
+<!-- Modal -->
+<div class="modal fade" id="{{ 'confirmModal'.$d->id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">Apakah Anda yakin akan menghapus data ini ?</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <form action="{{ route( 'product.destroy', $d->id) }}" method="post" style="display: inline">
+            @method('delete')
+            @csrf
+            <button class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i> Hapus</button>
+        </form>
+      </div>
     </div>
+  </div>
 </div>
 @endforeach
 

@@ -36,6 +36,8 @@
                             <!-- Product price-->
                             <!-- <span class="text-muted text-decoration-line-through">Rp 100000</span> -->
                             Rp. {{ $d->price }}
+
+                            <p>{{ $d->description }}</p>
                         </div>
                     </div>
                     <!-- Product actions-->
