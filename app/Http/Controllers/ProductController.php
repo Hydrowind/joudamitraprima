@@ -93,9 +93,10 @@ class ProductController extends Controller
         $data->price = $request->price;
 
         $file = $request->file('image');
-        $file->move('assets/uploads', $file->getClientOriginalName());
-
-        $data->imageUrl = '/assets/uploads/' . $file->getClientOriginalName();
+        if($file){
+            $file->move('assets/uploads', $file->getClientOriginalName());
+            $data->imageUrl = '/assets/uploads/' . $file->getClientOriginalName();
+        }
 
         if($data->save()){
             return redirect()->route('product.index');

@@ -23,7 +23,7 @@
                         <label for="image">Image</label>
                         <img src="{{ $data->imageUrl }}" alt="image" style="width: 300px; height: 200px"/>
                         <input type="file" class="form-control" id="imageUrl"
-                            placeholder="Input Image" name="image" value="{{ $data->imageUrl }}" required>
+                            placeholder="Input Image" name="image" value="{{ $data->imageUrl }}">
                     </div>
 
                     <div class="form-group">

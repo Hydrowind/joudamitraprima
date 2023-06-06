@@ -13,7 +13,7 @@
                 <img src="{{ $d->imageUrl }}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">{{ $d->title }}</h5>
-                  <p class="card-text">{{ $d->content }}</p>
+                  <p class="card-text">{{ substr($d->content, 0, 200) }}</p>
                   <a href="{{ route('newsdetail', $d->id) }}" class="btn btn-primary">Lihat Berita</a>
                 </div>
               </div>

@@ -89,9 +89,10 @@ class NewsController extends Controller
         $data->content = $request->content;
         
         $file = $request->file('image');
-        $file->move('assets/uploads', $file->getClientOriginalName());
-
-        $data->imageUrl = '/assets/uploads/' . $file->getClientOriginalName();
+        if($file){
+            $file->move('assets/uploads', $file->getClientOriginalName());
+            $data->imageUrl = '/assets/uploads/' . $file->getClientOriginalName();
+        }
 
         if($data->save()){
             return redirect()->route('news.index');
