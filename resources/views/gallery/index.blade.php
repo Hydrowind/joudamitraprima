@@ -31,7 +31,7 @@
                 <tbody>
                     @foreach($data as $d)
                     <tr>
-                        <td>{{ $d->imageUrl }}</td>
+                        <td><img src="{{ $d->imageUrl }}" alt="image" style="width: 300px; height: 200px"/></td>
                         <td> 
                             <div class="d-flex flex-row flex-nowrap">
                                 <form action="{{ route( 'gallery.edit', $d->id) }}" method="get">

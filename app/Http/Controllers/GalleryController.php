@@ -37,7 +37,10 @@ class GalleryController extends Controller
     {
         $data = new Gallery();
 
-        $data->imageUrl = $request->imageUrl;
+        $file = $request->file('image');
+        $file->move('assets/uploads', $file->getClientOriginalName());
+
+        $data->imageUrl = '/assets/uploads/' . $file->getClientOriginalName();
 
         if($data->save()){
             return redirect()->route('gallery.index');
@@ -79,7 +82,10 @@ class GalleryController extends Controller
     {
         $data = Gallery::find($id);
 
-        $data->imageUrl = $request->imageUrl;
+        $file = $request->file('image');
+        $file->move('assets/uploads', $file->getClientOriginalName());
+
+        $data->imageUrl = '/assets/uploads/' . $file->getClientOriginalName();
 
         if($data->save()){
             return redirect()->route('gallery.index');

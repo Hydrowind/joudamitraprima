@@ -35,7 +35,7 @@
                     <tr>
                         <td>{{ $d->title }}</td>
                         <td>{{ $d->content }}</td>
-                        <td>{{ $d->imageUrl }}</td>
+                        <td><img src="{{ $d->imageUrl }}" alt="image" style="width: 300px; height: 200px"/></td>
                         <td> 
                             <div class="d-flex flex-row flex-nowrap">
                                 <form action="{{ route( 'news.edit', $d->id) }}" method="get" class="d-inline">

@@ -36,7 +36,7 @@
                     @foreach($data as $d)
                     <tr>
                         <td>{{ $d->name }}</td>
-                        <td>{{ $d->imageUrl }}</td>
+                        <td><img src="{{ $d->imageUrl }}" alt="image" style="width: 300px; height: 200px"/></td>
                         <td>{{ $d->description }}</td>
                         <td>{{ $d->link }}</td>
                         <td>{{ $d->price }}</td>

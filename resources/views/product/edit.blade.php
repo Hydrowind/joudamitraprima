@@ -9,7 +9,7 @@
                 <h2 class="m-0 font-weight-bold text-primary"><i class="fas fa-house-user"></i> Edit Data</h2>
             </div>
             <div class="card-body">
-            <form class="user" method="post" action="{{ route('product.update', $data->id) }}">
+            <form class="user" method="post" action="{{ route('product.update', $data->id) }}" enctype="multipart/form-data">
                     @method('put')
                     @csrf
 
@@ -20,9 +20,10 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="imageUrl">Image URL</label>
-                        <input type="text" class="form-control" id="imageUrl"
-                            placeholder="Input Image URL" name="imageUrl" value="{{ $data->imageUrl }}" required>
+                        <label for="image">Image</label>
+                        <img src="{{ $data->imageUrl }}" alt="image" style="width: 300px; height: 200px"/>
+                        <input type="file" class="form-control" id="imageUrl"
+                            placeholder="Input Image" name="image" value="{{ $data->imageUrl }}" required>
                     </div>
 
                     <div class="form-group">

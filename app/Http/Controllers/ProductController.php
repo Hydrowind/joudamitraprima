@@ -38,10 +38,14 @@ class ProductController extends Controller
         $data = new Product();
 
         $data->name = $request->name;
-        $data->imageUrl = $request->imageUrl;
         $data->description = $request->description;
         $data->link = $request->link;
         $data->price = $request->price;
+
+        $file = $request->file('image');
+        $file->move('assets/uploads', $file->getClientOriginalName());
+
+        $data->imageUrl = '/assets/uploads/' . $file->getClientOriginalName();
 
         if($data->save()){
             return redirect()->route('product.index');
@@ -84,10 +88,14 @@ class ProductController extends Controller
         $data = Product::find($id);
 
         $data->name = $request->name;
-        $data->imageUrl = $request->imageUrl;
         $data->description = $request->description;
         $data->link = $request->link;
         $data->price = $request->price;
+
+        $file = $request->file('image');
+        $file->move('assets/uploads', $file->getClientOriginalName());
+
+        $data->imageUrl = '/assets/uploads/' . $file->getClientOriginalName();
 
         if($data->save()){
             return redirect()->route('product.index');

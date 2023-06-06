@@ -39,7 +39,11 @@ class NewsController extends Controller
 
         $data->title = $request->title;
         $data->content = $request->content;
-        $data->imageUrl = $request->imageUrl;
+
+        $file = $request->file('image');
+        $file->move('assets/uploads', $file->getClientOriginalName());
+
+        $data->imageUrl = '/assets/uploads/' . $file->getClientOriginalName();
 
         if($data->save()){
             return redirect()->route('news.index');
@@ -83,7 +87,11 @@ class NewsController extends Controller
 
         $data->title = $request->title;
         $data->content = $request->content;
-        $data->imageUrl = $request->imageUrl;
+        
+        $file = $request->file('image');
+        $file->move('assets/uploads', $file->getClientOriginalName());
+
+        $data->imageUrl = '/assets/uploads/' . $file->getClientOriginalName();
 
         if($data->save()){
             return redirect()->route('news.index');

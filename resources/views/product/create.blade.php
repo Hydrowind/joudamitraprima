@@ -9,7 +9,7 @@
                 <h2 class="m-0 font-weight-bold text-primary"><i class="fas fa-house-user"></i> Create New Data</h2>
             </div>
             <div class="card-body">
-                <form class="user" method="post" action="{{ route('product.store') }}">
+                <form class="user" method="post" action="{{ route('product.store') }}" enctype="multipart/form-data">
                     @csrf
 
                     <div class="form-group">
@@ -18,8 +18,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="imageUrl">Image URL</label>
-                        <input type="file" class="form-control-file" id="imageUrl" placeholder="Input Image URL" name="imageUrl" required>
+                        <label for="image">Image</label>
+                        <input type="file" class="form-control-file" id="image" placeholder="Input Image" name="image" required>
                     </div>
 
                     <div class="form-group">
