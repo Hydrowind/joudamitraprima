@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     'product'     => ProductController::class,
     'news'        => NewsController::class,
     'gallery'     => GalleryController::class,
+    // 'user'        => UserController::class,
   ]);
-  // Route::resource('users', UserController::class)->middleware('superadmin');
+  Route::resource('user', UserController::class)->middleware('superadmin');
+  Route::post('/changepassword/{user}', [UserController::class, 'changePassword'])->name('user.changepassword');
 });

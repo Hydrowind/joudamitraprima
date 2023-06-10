@@ -13,8 +13,17 @@ class PageController extends Controller
         return view('home', ['data' => Gallery::all()]);
     }
 
-    public function store(){
-        return view('store', ['data' => Product::all()]);
+    public function store(Request $request){
+        $keyword = $request->sort;
+
+        $data = Product::all();
+        if($keyword == 'highest_price'){
+            $product = $data->sortByDesc('price')->values()->all();
+        } else if($keyword == 'lowest_price'){
+            $product = $data->sortBy('price')->values()->all();
+        } 
+
+        return view('store', ['data' => $product]);
     }
 
     public function about(){

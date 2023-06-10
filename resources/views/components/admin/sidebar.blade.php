@@ -51,16 +51,23 @@
                     </nav>
                 </div> -->
                 <div class="sb-sidenav-menu-heading">Data</div>
+                @if(Auth::user()->role == 0)
+                <a class="nav-link" href="{{ route('user.index') }}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                    User
+                </a>
+                @endif
+
                 <a class="nav-link" href="{{ route('product.index') }}">
-                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                    <div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
                     Product
                 </a>
                 <a class="nav-link" href="{{ route('news.index') }}">
-                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                    <div class="sb-nav-link-icon"><i class="fas fa-newspaper"></i></div>
                     News
                 </a>
                 <a class="nav-link" href="{{ route('gallery.index') }}">
-                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                    <div class="sb-nav-link-icon"><i class="fas fa-photo-film"></i></div>
                     Gallery
                 </a>
             </div>

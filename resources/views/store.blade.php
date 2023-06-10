@@ -12,6 +12,16 @@
 <!-- Section-->
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Filter
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{ route('store', ['sort' => 'highest_price']) }}">Highest Price</a></li>
+                <li><a class="dropdown-item" href="#">Lowest Price</a></li>
+                <li><a class="dropdown-item" href="#">No Filter</a></li>
+            </ul>
+        </div>
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             @foreach($data as $d)
             <div class="col mb-5">

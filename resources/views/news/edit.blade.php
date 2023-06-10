@@ -1,7 +1,6 @@
 @extends('layouts.admin')
 @section('content')
 
-<!-- DataTales Example -->
 <div class="content-box-large">
     <div class="card-body">
         <div class="card shadow mb-4">
