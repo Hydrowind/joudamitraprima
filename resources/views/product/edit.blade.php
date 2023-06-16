@@ -42,6 +42,11 @@
                         <input type="number" class="form-control" id="price"
                             placeholder="Input Price" name="price" value="{{ $data->price }}" required>
                     </div>
+
+                    <div class="form-group">
+                        <label for="rating">Rating</label>
+                        <input type="number" class="form-control" id="rating" placeholder="Input Rating" name="rating" value="{{ $data->rating }}" required>
+                    </div>
                     
                     <button type="submit" class="btn btn-primary btn-user btn-block">
                         Submit

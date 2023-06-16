@@ -11,6 +11,7 @@ class PageController extends Controller
 {
     public function home(){
         return view('home', ['data' => Gallery::all()]);
+        // return view('home2');
     }
 
     public function store(Request $request){
@@ -18,12 +19,14 @@ class PageController extends Controller
 
         $data = Product::all();
         if($keyword == 'highest_price'){
-            $product = $data->sortByDesc('price')->values()->all();
+            $data = $data->sortByDesc('price')->values()->all();
         } else if($keyword == 'lowest_price'){
-            $product = $data->sortBy('price')->values()->all();
+            $data = $data->sortBy('price')->values()->all();
+        } else if($keyword == 'most_popular'){
+            $data = $data->sortByDesc('rating')->values()->all();
         } 
 
-        return view('store', ['data' => $product]);
+        return view('store', ['data' => $data]);
     }
 
     public function about(){

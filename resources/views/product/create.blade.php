@@ -36,6 +36,11 @@
                         <label for="price">Price</label>
                         <input type="number" class="form-control" id="price" placeholder="Input Price" name="price" required>
                     </div>
+                    
+                    <div class="form-group">
+                        <label for="rating">Rating</label>
+                        <input type="number" class="form-control" id="rating" placeholder="Input Rating" name="rating" required>
+                    </div>
 
                     <button type="submit" class="btn btn-primary btn-user btn-block">
                         Submit

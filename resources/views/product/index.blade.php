@@ -29,6 +29,7 @@
                         <th>Description</th>
                         <th>Link</th>
                         <th>Price</th>
+                        <th>Rating</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -41,14 +42,15 @@
                         <td>{{ $d->link }}</td>
                         <td>{{ $d->price }}</td>
                         <td>
-                            <div class="d-flex flex-row flex-nowrap">
-                                <form action="{{ route( 'product.edit', $d->id) }}" method="get" class="d-inline">
-                                    <button class="btn btn-warning">Edit</button>
-                                </form>
-                                <a class="btn btn-danger ml-2" href="#" data-bs-toggle="modal" data-bs-target="{{ '#confirmModal'.$d->id }}">
-                                    Hapus
-                                </a>
-                            </div>
+                            @for($i=0 ; $i<$d->rating ; $i++)    
+                                <div class="fa-solid fa-star"></div>
+                            @endfor
+                        </td>
+                        <td>                                
+                            <a class="btn btn-warning" href="{{ route( 'product.edit', $d->id) }}"><i class="fas fa-edit"></i>Edit</a>
+                            <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="{{ '#confirmModal'.$d->id }}">
+                                <i class="fas fa-trash"></i> Hapus
+                            </a>
                         </td>
                     </tr>
                     @endforeach

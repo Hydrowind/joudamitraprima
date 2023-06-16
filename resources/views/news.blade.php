@@ -10,7 +10,7 @@
           @foreach($data as $d)
             <div class="col-md-4 mt-3">
               <div class="card">
-                <img src="{{ $d->imageUrl }}" class="card-img-top" alt="...">
+                <img src="{{ $d->imageUrl }}" class="card-img-top object-fit-cover overflow-hidden" height="250px" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">{{ $d->title }}</h5>
                   <p class="card-text">{{ substr($d->content, 0, 200) }}</p>

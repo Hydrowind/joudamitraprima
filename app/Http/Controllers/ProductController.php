@@ -41,6 +41,7 @@ class ProductController extends Controller
         $data->description = $request->description;
         $data->link = $request->link;
         $data->price = $request->price;
+        $data->price = $request->rating;
 
         $file = $request->file('image');
         $file->move('assets/uploads', $file->getClientOriginalName());
@@ -91,6 +92,7 @@ class ProductController extends Controller
         $data->description = $request->description;
         $data->link = $request->link;
         $data->price = $request->price;
+        $data->price = $request->rating;
 
         $file = $request->file('image');
         if($file){

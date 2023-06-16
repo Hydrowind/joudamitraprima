@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('link');
             $table->integer('price');
+            $table->integer('rating');
             $table->timestamps();
         });
     }
