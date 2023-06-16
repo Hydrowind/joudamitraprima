@@ -13,7 +13,7 @@
                 <li class="nav-item"><a class="nav-link" href="/news">News</a></li>
                 <li class="nav-item"><a class="nav-link" href="#portfolio">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ 'https://translate.google.com/translate?sl=auto&tl=en&u=' . env('APP_URL') }}">Translate</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ 'https://translate.google.com/translate?sl=auto&tl=en&u=' . env('APP_URL') }}">Language</a></li>
             </ul>
         </div>
     </div>

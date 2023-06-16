@@ -41,16 +41,16 @@ class ProductController extends Controller
         $data->description = $request->description;
         $data->link = $request->link;
         $data->price = $request->price;
-        $data->price = $request->rating;
+        $data->rating = $request->rating;
 
         $file = $request->file('image');
         $file->move('assets/uploads', $file->getClientOriginalName());
 
         $data->imageUrl = '/assets/uploads/' . $file->getClientOriginalName();
 
-        if($data->save()){
+        if ($data->save()) {
             return redirect()->route('product.index');
-        }else{
+        } else {
             return back()->withInput();
         }
     }
@@ -92,17 +92,17 @@ class ProductController extends Controller
         $data->description = $request->description;
         $data->link = $request->link;
         $data->price = $request->price;
-        $data->price = $request->rating;
+        $data->rating = $request->rating;
 
         $file = $request->file('image');
-        if($file){
+        if ($file) {
             $file->move('assets/uploads', $file->getClientOriginalName());
             $data->imageUrl = '/assets/uploads/' . $file->getClientOriginalName();
         }
 
-        if($data->save()){
+        if ($data->save()) {
             return redirect()->route('product.index');
-        }else{
+        } else {
             return back()->withInput();
         }
     }
